@@ -1,0 +1,44 @@
+{
+  "name": "template-engine",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.7.4",
+    "express": "^4.18.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.3",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.2"
+  },
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "1. npm install -g express-generator\r 2. express --view ejs --git nama_project\r 3. Masuk ke directory: cd nama_project\r 4. npm install\r 5. npm start",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/arif2810/mvc.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/arif2810/mvc/issues"
+  },
+  "homepage": "https://gitlab.com/arif2810/mvc#readme",
+  "directories": {
+    "lib": "lib"
+  }
+}

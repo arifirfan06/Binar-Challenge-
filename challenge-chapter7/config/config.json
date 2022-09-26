@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "arif",
+    "password": "root",
+    "database": "game",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "arif",
+    "password": "root",
+    "database": "game",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "arif",
+    "password": "root",
+    "database": "game",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

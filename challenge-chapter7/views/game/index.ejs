@@ -1,0 +1,79 @@
+<%- include("../partials/head"); -%>
+
+<body>
+  
+  <div class="container-fluid">
+    <div class="row mb-3 mt-4">
+      <div class="col-md-12">
+        <a href="/userCreate" class="btn btn-primary disabled">Add User</a>
+      </div>
+    </div>
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Data User</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Data User</h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Access</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% 
+              let no = 1;
+              users.forEach(user => { %>
+              <tr>
+                <td><%= no++ %></td>
+                <td><%= user.username %></td>
+                <td><%= user.password %></td>
+                <% if(user.access == "admin"){ %>
+                  <td><span class="badge badge-primary"><%= user.access %></span></td>
+                <% }
+                else{ %>
+                  <td><span class="badge badge-success"><%= user.access %></span></td>
+                <% } %>
+                
+                <% if(user.username == "admin"){ %>
+                  <td>
+                    <a href="/user_game/edit/<%= user.id %>" class="btn btn-success btn-sm disabled">Edit</a>
+                    <a href="/userDelete/<%= user.id %>" class="btn btn-danger btn-sm disabled" onclick="return confirm('Are you sure, want to delete?')">Delete</a>
+                  </td>
+                <% }
+                else{ %>
+                  <td>
+                    <a href="/user_game/edit/<%= user.id %>" class="btn btn-success btn-sm disabled">Edit</a>
+                    <a href="/userDelete/<%= user.id %>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure, want to delete?')">Delete</a>
+                  </td>
+                <% } %>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3 mt-4">
+      <div class="col-md-12">
+        <a href="/play" class="btn btn-success">Let's play!</a>
+      </div>
+    </div>
+
+  </div>
+
+<%- include("../partials/footer"); -%>
+
+
+
+
